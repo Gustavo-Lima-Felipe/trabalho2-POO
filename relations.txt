@@ -1,0 +1,4 @@
+Client -> Account (1:N): A client can have multiple accounts.
+Client -> Investment (1:N): A client can have multiple investments.
+Account -> Transaction (1:N): An account can have multiple transactions.
+Investment -> Account (1:1): Investments interact with accounts during sale.
