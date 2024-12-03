@@ -1,11 +1,75 @@
-Copyright (C) 2024, Gustavo Lima Felipe
+# NG Finances
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
-to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
-and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+Um pacote Python para gerenciar finanças pessoais, incluindo transações, contas e investimentos.
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+## Descrição
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+O pacote **NG Finances** ajuda os usuários a gerenciar receitas, despesas e investimentos. 
+Ele fornece ferramentas para rastreamento de transações, categorização, análise financeira 
+e geração de relatórios financeiros e projeções futuras.
+
+## Recursos
+
+- Gerencia de contas e transações financeiras;
+- Rastreia investimentos com cálculos de rendimento;
+- Gera relatórios financeiros detalhados;
+- Mostra projeções futuras de patrimônio.
+
+## Instalação:
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/Gustavo-Lima-Felipe/trabalho2-POO.git
+
+```
+
+2. Navegue até o diretório do projeto e instale o pacote:
+
+```bash
+cd finances
+pip install .
+
+```
+3. Para instalar as dependências adicionais, execute:
+
+```bash
+pip install -r requirements.txt
+
+```
+
+## Uso
+
+Crie um cliente, adicione uma conta e registre transações:
+
+```python
+from finances.models import Client
+
+client = Client("Alice")
+account = client.add_account("Conta Corrente")
+account.add_transaction(5000.0, "Salário", "Recebimento de salário")
+```
+
+Gere um relatório financeiro:
+
+```python
+from finances.utils import generate_report
+
+print(generate_report(client))
+```
+
+## Testes
+
+Para executar os testes, utilize **pytest**:
+
+```bash
+pytest
+```
+
+## Licença
+
+Este projeto está licenciado sob os termos da Licença MIT. Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
+
+## Contato
+
+Criado por Gustavo Lima Felipe (https://github.com/Gustavo-Lima-Felipe).
